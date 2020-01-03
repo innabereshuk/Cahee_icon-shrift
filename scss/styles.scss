@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700&display=swap');
+
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    min-height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #262626;
+    margin: 0;
+}
+
+a, button {
+    transition: all .4s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.services {
+    background: #70bfff;
+    height: max-content;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url(../servic.png);
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: calc(100% / 2);
+    padding: 18rem 6rem 15rem;
+    &__item {
+        width: 40.3rem;
+        background: $bg-list;
+        margin-bottom: 2rem;
+        list-style: none;
+        box-shadow: 0 0 8px 1px rgba(0, 0, 0, .5);
+    }
+    &__link {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        @include font(2rem, $text-color, 700, $text-ff, 1.3);
+        padding: 2.1rem 2.3rem;
+        border: $b-size solid transparent;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 30.3rem;
+            width: 2px;
+            height: 101px;
+            background: rgba(0, 0, 0, .2);
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgba(0, 0, 0, .5);
+            color: $title-color;
+            border: $b-size solid $bg-list;
+            @include hover;
+            opacity: .6;
+        }
+        &:hover svg,
+        &:focus svg,
+        &:active svg {
+           fill: white;
+           transform: scale(1.2);
+        } 
+        &:hover path,
+        &:focus path,
+        &:active path {
+            fill: white;
+            
+        }
+        span {
+            margin: 0 auto;
+        }
+    }
+}
+
+.list__link:hover::after {
+        background: $bg-list;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 30.3rem;
+        width: 2px;
+        height: 101px;
+    }
+
+
+.title {
+    @include font(9rem, $title-color, 700, $text-ff, 1.3);
+    width: calc(100% / 2);
+    max-height: 360px;
+    max-width: calc(100% / 2 - 40px);
+    overflow: hidden;
+    hyphens: auto;
+}
+
+
+
+
+
+
+  
