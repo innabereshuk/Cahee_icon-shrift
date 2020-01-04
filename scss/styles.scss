@@ -42,17 +42,13 @@ a, button {
     background-size: auto;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: calc(100% / 2);
-    padding: 18rem 6rem 15rem;
-    &__item {
+    padding: 18rem 11rem 15rem;
+        &__item {
         width: 40.3rem;
         background: $bg-list;
         margin-bottom: 2rem;
@@ -62,10 +58,10 @@ a, button {
     &__link {
         display: flex;
         position: relative;
-        justify-content: space-between;
         align-items: center;
+        text-align: center;
         @include font(2rem, $text-color, 700, $text-ff, 1.3);
-        padding: 2.1rem 2.3rem;
+        padding: 2.1rem 2.3rem 2.1rem 0;
         border: $b-size solid transparent;
         &::after {
             content: "";
@@ -73,8 +69,8 @@ a, button {
             position: absolute;
             top: 0;
             left: 30.3rem;
-            width: 2px;
-            height: 101px;
+            width: .2rem;
+            height: 10.1rem;
             background: rgba(0, 0, 0, .2);
         }
         &:hover,
@@ -99,7 +95,9 @@ a, button {
             
         }
         span {
+            display: block;
             margin: 0 auto;
+            padding-right: 2.3rem;
         }
     }
 }
@@ -111,19 +109,18 @@ a, button {
         position: absolute;
         top: 0;
         left: 30.3rem;
-        width: 2px;
-        height: 101px;
+        width: .2rem;
+        height: 10.1rem;
     }
 
 
 .title {
     @include font(9rem, $title-color, 700, $text-ff, 1.3);
-    width: calc(100% / 2);
-    max-height: 360px;
-    max-width: calc(100% / 2 - 40px);
+    max-height: 36rem;
     overflow: hidden;
-    hyphens: auto;
-}
+    margin-left: 2rem;
+    margin-right: 1rem;
+   }
 
 
 
